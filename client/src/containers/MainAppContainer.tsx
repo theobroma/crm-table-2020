@@ -1,5 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import styled, { createGlobalStyle } from 'styled-components/macro';
+
+const Thing = styled.div`
+  color: red;
+`;
 // import HeaderComponent from '../components/Header/Header';
 // import ListComponent from '../components/List/List';
 // import FooterComponent from '../components/Footer/Footer';
@@ -11,6 +16,7 @@ const MainApp: React.FC = (props: any) => {
     <div className="App">
       <section className="todoapp">
         <div>Components</div>
+        <Thing>12312312312313</Thing>
       </section>
     </div>
   );
