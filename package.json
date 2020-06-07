@@ -1,7 +1,7 @@
 {
-  "name": "heroku-ts-todolist",
+  "name": "crm-table-2020",
   "version": "1.0.0",
-  "description": "React+typescript todolist application with heroku.",
+  "description": "React+typescript application.",
   "main": "index.js",
   "dependencies": {
     "concurrently": "^5.2.0"
@@ -19,13 +19,13 @@
 },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theobroma/heroku-ts-todolist.git"
+    "url": "git+https://github.com/theobroma/crm-table-2020"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/theobroma/heroku-ts-todolist/issues"
+    "url": "https://github.com/theobroma/crm-table-2020/issues"
   },
-  "homepage": "https://github.com/theobroma/heroku-ts-todolist#readme"
+  "homepage": "https://github.com/theobroma/crm-table-2020#readme"
 }

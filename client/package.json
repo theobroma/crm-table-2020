@@ -1,6 +1,6 @@
 {
-  "name": "corona-tracker-ts",
-  "version": "0.1.0",
+  "name": "crm-table-2020-client",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.14",
