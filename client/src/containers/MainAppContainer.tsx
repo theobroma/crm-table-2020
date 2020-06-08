@@ -1,23 +1,24 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import styled, { createGlobalStyle } from 'styled-components/macro';
+// import { useSelector } from 'react-redux';
+import styled from 'styled-components/macro';
+import HeaderComponent from '../components/Header';
 
 const Thing = styled.div`
   color: red;
 `;
-// import HeaderComponent from '../components/Header/Header';
-// import ListComponent from '../components/List/List';
-// import FooterComponent from '../components/Footer/Footer';
 // import { todosSelector } from '../store/selectors';
 
-const MainApp: React.FC = (props: any) => {
+interface Props {
+  // activeTodoCount: number;
+  // completedCount: number;
+}
+
+const MainApp: React.FC<Props> = (props) => {
   // const todos = useSelector(todosSelector).data;
   return (
     <div className="App">
-      <section className="todoapp">
-        <div>Components</div>
-        <Thing>12312312312313</Thing>
-      </section>
+      <Thing>12312312312313</Thing>
+      <HeaderComponent />
     </div>
   );
 };
