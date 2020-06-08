@@ -4,3 +4,69 @@
   text-align: center;
   color: $c-orange;
 }
+
+.header {
+  display: flex;
+  flex-flow: row;
+  background-color: #f3f3f3;
+}
+.header-title {
+  width: 180px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #343434;
+  border-right: solid 1px rgba(151, 151, 151, 0.12);
+}
+
+.filters {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.filters li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.filters li a {
+  // color: inherit;
+  // margin: 3px;
+  // padding: 3px 7px;
+  text-decoration: none;
+  // border: 1px solid transparent;
+  // border-radius: 3px;
+}
+
+.filters li a:hover {
+  border-color: rgba(175, 47, 47, 0.1);
+}
+
+.filters li a.selected {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.filters li a.active {
+  border-color: $c-pink;
+  color: $c-pink;
+}
+
+.isDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.isDisabled > a {
+  color: currentColor;
+  display: inline-block; /* For IE11/ MS Edge bug */
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}

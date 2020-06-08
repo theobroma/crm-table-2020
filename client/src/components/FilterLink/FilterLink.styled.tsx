@@ -39,4 +39,7 @@ export const Styled = styled.li`
     text-align: center;
     white-space: nowrap;
   }
+  .buttons .button:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 `;

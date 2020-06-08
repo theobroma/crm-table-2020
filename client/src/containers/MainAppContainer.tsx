@@ -17,7 +17,7 @@ const MainApp: React.FC<Props> = (props) => {
   // const todos = useSelector(todosSelector).data;
   return (
     <div className="App">
-      <Thing>12312312312313</Thing>
+      <Thing>Thing</Thing>
       <HeaderComponent />
     </div>
   );
