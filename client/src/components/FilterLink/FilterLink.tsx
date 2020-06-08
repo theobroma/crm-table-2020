@@ -1,5 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
+import { Styled } from './FilterLink.styled';
 
 interface Props {
   type?: any;
@@ -26,7 +27,27 @@ const FilterLink: React.FC<Props> = React.memo((props) => {
   //   }
   //   return null;
   // };
-  return <div>link</div>;
+  return (
+    <Styled
+    // className={cx({
+    //   isDisabled: activeFiltersCount < 2 && filter.active,
+    // })}
+    >
+      {/* eslint-disable jsx-a11y/anchor-is-valid */}
+      <a
+        href="#"
+        onClick={() => props.toggleFilter(props.type)}
+        className={cx({
+          selected: props.filter === props.type,
+          // active: filter.active,
+          button: true,
+        })}
+      >
+        {props.children}
+      </a>
+      {/* eslint-enable jsx-a11y/anchor-is-valid */}
+    </Styled>
+  );
 });
 
 export default FilterLink;

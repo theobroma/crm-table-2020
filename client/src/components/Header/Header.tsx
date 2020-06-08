@@ -1,5 +1,5 @@
 import * as React from 'react';
-import FilterLink from './FilterLink';
+import FilterLink from '../FilterLink/FilterLink';
 
 interface Props {
   // activeTodoCount: number;
