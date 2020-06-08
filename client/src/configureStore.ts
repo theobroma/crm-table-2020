@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import throttle from 'lodash/throttle';
@@ -13,11 +13,8 @@ const configureStore = () => {
   const persistedState = loadState();
 
   let totalInitialState = {
-    todos: {
-      // data: MOCK_DATA,
+    filter: {
       data: [],
-      // pending: false,
-      // errorMessage: '',
     },
   };
   // if persistedState is not empty then assign parsed persistedState to initState
@@ -38,14 +35,14 @@ const configureStore = () => {
   const store = createStore(
     rootReducer,
     totalInitialState,
-    composeEnhancers(applyMiddleware(...middlewares)),
+    composeEnhancers(applyMiddleware(...middlewares))
   );
 
   store.subscribe(
     throttle(() => {
       console.log('saved to localStorage');
       saveState(store.getState());
-    }, 1000),
+    }, 1000)
   );
 
   return store;
