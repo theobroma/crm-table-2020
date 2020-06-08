@@ -1,28 +1,32 @@
-import {TOGGLE_FILTER} from './actions';
+import { createReducer } from 'typesafe-actions';
+import { TOGGLE_FILTER } from './constants';
 
-const filtersInitialState = {
+import { FilterListType, FilterItemType, FilterActionType } from './types';
+
+const initialState: FilterListType = {
   data: [
-    {name: 'gold', active: false},
-    {name: 'silver', active: true},
-    {name: 'wood', active: true},
-    {name: 'standart', active: false},
+    { name: 'GOLD', active: false },
+    { name: 'SILVER', active: true },
+    { name: 'WOOD', active: true },
+    { name: 'STANDART', active: false },
   ],
 };
 
-//filter reducer
-function filters(state = filtersInitialState, action: any) {
-  if (action.type === TOGGLE_FILTER) {
-    return {
-      ...state,
-      data: state.data.map((filter: any) => {
-        if (filter.name === action.filter.toLowerCase()) {
-          return {...filter, active: !filter.active};
-        }
-        return filter;
-      }),
-    };
+const filterReducer = createReducer<FilterListType, FilterActionType>(
+  initialState,
+  {
+    [TOGGLE_FILTER]: (state, { payload: filterName }) => {
+      return {
+        ...state,
+        data: state.data.map((filter: FilterItemType) => {
+          if (filter.name === filterName) {
+            return { ...filter, active: !filter.active };
+          }
+          return filter;
+        }),
+      };
+    },
   }
-  return state;
-}
+);
 
-export default filters;
+export default filterReducer;

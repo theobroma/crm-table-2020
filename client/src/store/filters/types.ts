@@ -1,15 +1,15 @@
 import { ActionType } from 'typesafe-actions';
 import { actions } from './actions';
 
-export interface TodoType {
-  _id: string;
-  text: string;
-  completed: boolean;
-}
+export type FilterType = 'GOLD' | 'SILVER' | 'WOOD' | 'STANDART';
 
-export type TodoListType = {
-  data: TodoType[];
+export type FilterItemType = {
+  name: FilterType;
+  active: boolean;
 };
 
-export type TodoActionType = ActionType<typeof actions>;
-export type FilterType = 'SHOW_ALL' | 'SHOW_ACTIVE' | 'SHOW_COMPLETED';
+export type FilterListType = {
+  data: FilterItemType[];
+};
+
+export type FilterActionType = ActionType<typeof actions>;

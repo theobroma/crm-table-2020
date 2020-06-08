@@ -1,4 +1,4 @@
-import { RootState } from '../store/index';
+import { RootState } from '../index';
 
 export const todosSelector = (state: RootState) => {
   return state.todos;
