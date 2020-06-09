@@ -25,7 +25,7 @@ const FilterLink: React.FC<Props> = React.memo(({ children, type }) => {
   return (
     <Styled
       className={cx({
-        // prevent last active btn from disabling
+        // The user cannot turn off the only included discount type.
         isDisabled: activeFiltersCount < 2 && currentFilter.active,
       })}
     >
