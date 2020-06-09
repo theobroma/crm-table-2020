@@ -2,6 +2,7 @@ import React from 'react';
 // import { useSelector } from 'react-redux';
 import styled from 'styled-components/macro';
 import HeaderComponent from '../components/Header/Header';
+import TableComponent from '../components/Table/Table';
 
 const Thing = styled.div`
   color: red;
@@ -19,6 +20,7 @@ const MainApp: React.FC<Props> = (props) => {
     <div className="App">
       <Thing>Thing</Thing>
       <HeaderComponent />
+      <TableComponent />
     </div>
   );
 };
