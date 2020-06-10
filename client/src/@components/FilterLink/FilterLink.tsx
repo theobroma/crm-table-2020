@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import cx from 'classnames';
-import { actions } from '../../store/filter/actions';
+import { actions } from '../../@store/filter/actions';
 import {
   filterSelector,
   activeFiltersSelector,
-} from '../../store/filter/selectors';
-import { FilterItemType, FilterType } from '../../store/filter/types';
+} from '../../@store/filter/selectors';
+import { FilterItemType, FilterType } from '../../@store/filter/types';
 import { Styled } from './FilterLink.styled';
 
 interface Props {

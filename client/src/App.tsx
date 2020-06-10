@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import MainAppContainer from './containers/MainAppContainer';
+import MainAppContainer from './#/#/Main';
 import configureStore from './configureStore';
 
 const store = configureStore();

@@ -1,8 +1,8 @@
 import React from 'react';
 // import { useSelector } from 'react-redux';
 import styled from 'styled-components/macro';
-import HeaderComponent from '../components/Header/Header';
-import TableComponent from '../components/Table/Table';
+import HeaderComponent from '../../@components/Header/Header';
+import TableComponent from '../../@components/Table/Table';
 
 const Thing = styled.div`
   color: red;

@@ -1,6 +1,6 @@
 import { createReducer } from 'typesafe-actions';
 import { TOGGLE_FILTER } from './constants';
-import { clientsArr } from '../../helpers/mockclients';
+import { clientsArr } from '../../@helpers/mockclients';
 import { ClientsListType, ClientsActionType } from './types';
 
 const initialState: ClientsListType = {

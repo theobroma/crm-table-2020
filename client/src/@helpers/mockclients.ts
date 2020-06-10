@@ -1,4 +1,4 @@
-import { ClientsItemType } from '../store/clients/types';
+import { ClientsItemType } from '../@store/clients/types';
 // mock data if needed
 export const clientsArr: ClientsItemType[] = [
   {

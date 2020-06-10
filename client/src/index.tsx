@@ -4,7 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 // All styles
 import './index.css';
-import './assets/styles/index.scss';
+import './@assets/styles/index.scss';
 
 const rootEl = document.getElementById('root');
 render(<App />, rootEl);
