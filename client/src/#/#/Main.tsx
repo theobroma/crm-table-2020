@@ -1,8 +1,9 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components/macro';
 import HeaderComponent from '../../@components/Header/Header';
 import TableComponent from '../../@components/Table/Table';
+import { clientsSelector } from '../../@store/clients/selectors';
 
 const Thing = styled.div`
   color: red;
@@ -15,12 +16,12 @@ interface Props {
 }
 
 const MainApp: React.FC<Props> = (props) => {
-  // const todos = useSelector(todosSelector).data;
+  const clientsData = useSelector(clientsSelector).data;
   return (
     <div className="App">
       <Thing>Thing</Thing>
       <HeaderComponent />
-      <TableComponent />
+      <TableComponent data={clientsData} />
     </div>
   );
 };
