@@ -26,7 +26,7 @@ const FilterLink: React.FC<Props> = React.memo(({ children, type }) => {
     <Styled
       className={cx({
         // The user cannot turn off the only included discount type.
-        isDisabled: activeFiltersCount < 2 && currentFilter.active,
+        // isDisabled: activeFiltersCount < 2 && currentFilter.active,
       })}
     >
       {/* eslint-disable jsx-a11y/anchor-is-valid */}
@@ -35,7 +35,7 @@ const FilterLink: React.FC<Props> = React.memo(({ children, type }) => {
         onClick={() => dispatch(actions.toggleFilter(type))}
         className={cx({
           // selected: props.filter === props.type,
-          active: currentFilter.active,
+          // active: currentFilter.active,
           button: true,
         })}
       >
